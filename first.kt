@@ -1,19 +1,32 @@
 fun main() {
-  var date1:Int = readln()!!.toInt()
-  var mes1:Int = readln()!!.toInt()
-  var god1:Int = readln()!!.toInt()
-  
-  var date2:Int = readln()!!.toInt()
-  var mes2:Int = readln()!!.toInt()
-  var god2:Int = readln()!!.toInt()
-  
-  if (god1 == god2){
-      if (mes1 == mes2)
-          if (date1 < date2) println("1 старше")
-          else println("2 старше")
-      else if (mes1 < mes2) println("1 старше")
-      else println("2 старше")
-  }
-  else if (god1 < god2)println("1 старше")
-  else println("2 старше")
+    val day1: Int = readLine()!!.toInt()
+    val mon1: Int = readLine()!!.toInt()
+    val ye1: Int = readLine()!!.toInt()
+    val dai_2: Int = readLine()!!.toInt()
+    val mon2: Int = readLine()!!.toInt()
+    val ye2: Int = readLine()!!.toInt()
+    
+    if (ye1 > ye2){
+        println("2 старше")
+    } else if (ye1 < ye2){
+        println("1 старше")
+    } else if (ye1 == ye2){
+        if (mon1 > mon2){
+            println("2 старше")
+        }
+        else if (mon1 < mon2){
+            println("1 старше")
+        }
+        else if (mon1 == mon2){
+            if (day1 > dai_2){
+                println("2 старше")
+            }
+            else if (day1 < dai_2){
+                println("1 старше")
+            }
+            else{
+                println("Один в один")
+            }
+        }
+    }
 }
